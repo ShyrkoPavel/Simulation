@@ -8,4 +8,9 @@ public class Tree extends Entity {
         super(coordinates);
     }
 
+    public void a1(){
+        System.out.println();
+        System.out.println();
+    }
+
 }
