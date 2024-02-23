@@ -16,7 +16,6 @@ public class Predator extends Creature {
     public Predator() {
     }
 
-
     public void findNearestHerbivoreAndMove(Map map) {
 
         List<Coordinates> pathToHerbivore = BreadthFirstSearch.findPathToEntity(map, this.coordinates, entity -> entity instanceof Herbivore);
@@ -32,7 +31,6 @@ public class Predator extends Creature {
         }
     }
 
-
     public void attack(Coordinates target, Map map) {
         Herbivore h = ((Herbivore) map.getEntity(target));
         if (target != null) {
@@ -42,9 +40,7 @@ public class Predator extends Creature {
         if (h.getHP() <= 0) {
             map.removeEntity(target);
             map.moveEntity(this.coordinates, target);
-
         }
-
     }
 
 }

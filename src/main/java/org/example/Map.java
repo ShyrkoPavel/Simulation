@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entitys.Entity;
+
 import java.util.*;
 
 public class Map {
@@ -9,7 +11,6 @@ public class Map {
     public void setEntityHashMap(Coordinates coordinates, Entity entity) {
 
         entity.coordinates = coordinates;
-
         entityHashMap.put(coordinates, entity);
 
     }
@@ -46,16 +47,6 @@ public class Map {
 
     }
 
-
-    /*
-    ранк высота
-    getNeighbors перебирает координаты в двух циклах по вертикале и горизонтале и возвращает соседние координаты
-    начиная от текущих координат - 1, потом тек.координат, затем тек.координат +1
-     exp. file=2, rank = 6 ---> сначада ранк 5, филе 1, потом ранк 5 филе 2, ранк 5 филе 3,
-                                   ранк 6, филе 1, ранк 6 филе 2, ранк 6 филе 3,
-                                   ранк 7, филе 1, ранк 7 филе 2, ранк 7 филе 3,
-
-     */
     public List<Coordinates> getNeighbors(Coordinates coord, Map map) {
         List<Coordinates> neighbors = new ArrayList<>();
 
@@ -65,7 +56,6 @@ public class Map {
         for (int i = rank - 1; i <= rank + 1; i++) {
             for (int j = file - 1; j <= file + 1; j++) {
                 Coordinates neighbour = new Coordinates(j, i);
-
 
                 if (isValidCoordinate(neighbour, map)) {
 
@@ -82,19 +72,11 @@ public class Map {
         int y = coord.rank;
 
         if (x < 1 || x > 9 || y < 1 || y > 9) {
-            return false; // Вне границ карты
+            return false;
         }
 
         return true;
     }
-
-      /*
-     getEntitiesOfType возвращает карту, содержащую сущности определенного типа T по указанным координатам.
-     Создается новая HashMap с координатами в качестве ключей и объектами типа T в качестве значений
-     Итерируем по всем элементам в entityHashMap
-     Для каждой сущности в entityHashMap проверяется, является ли сущность экземпляром класса, предоставленного в параметре typeEntity.
-     Это делается с помощью метода isInstance, который проверяет, является ли данный объект экземпляром указанного класса.
-       */
 
     public <T> HashMap<Coordinates, T> getEntitiesOfType(Class<T> typeEntity) {
         HashMap<Coordinates, T> result = new HashMap<>();

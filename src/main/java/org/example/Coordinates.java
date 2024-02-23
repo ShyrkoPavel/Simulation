@@ -3,8 +3,8 @@ package org.example;
 import java.util.Objects;
 
 public class Coordinates {
-    public final  int file ; //long
-    public final  int rank ; //width
+    public final  int file ;
+    public final  int rank ;
 
     public Coordinates(int file, int rank) {
         this.file = file;

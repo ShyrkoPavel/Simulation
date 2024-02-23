@@ -1,6 +1,6 @@
 package org.example.action;
 
-import org.example.Entity;
+import org.example.entitys.Entity;
 import org.example.entitys.creatures.Herbivore;
 import org.example.entitys.creatures.Predator;
 import org.example.Map;

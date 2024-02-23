@@ -29,8 +29,8 @@ public class Simulation {
             moveAction.perform(map);
 
             renderer.render(map);
-
             return true;
+
         } else {
             return false;
         }

@@ -2,7 +2,7 @@ package org.example.entitys.creatures;
 
 
 import org.example.Coordinates;
-import org.example.Entity;
+import org.example.entitys.Entity;
 import org.example.Map;
 
 import java.util.Objects;
@@ -26,17 +26,13 @@ public abstract class Creature extends Entity {
         return HP;
     }
 
-    public void findNearestHerbivoreAndMove(Map map) {
-
-    }
-
-
+//    public void findNearestHerbivoreAndMove(Map map) {
+//
+//    }
 
     public void attack(Coordinates fromCoordinates,Coordinates targetCoordinates, Map map) {
 
     }
-
-
 
     @Override
     public boolean equals(Object o) {

@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.entitys.Entity;
 import org.example.entitys.creatures.Herbivore;
 import org.example.entitys.Grass;
 

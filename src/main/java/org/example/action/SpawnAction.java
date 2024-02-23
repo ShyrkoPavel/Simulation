@@ -1,7 +1,7 @@
 package org.example.action;
 
 import org.example.Coordinates;
-import org.example.Entity;
+import org.example.entitys.Entity;
 import org.example.Map;
 
 public abstract class SpawnAction<T extends Entity> extends Action {

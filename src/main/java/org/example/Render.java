@@ -2,6 +2,7 @@ package org.example;
 
 
 
+import org.example.entitys.Entity;
 import org.example.entitys.creatures.Herbivore;
 import org.example.entitys.creatures.Predator;
 import org.example.entitys.Grass;
@@ -16,7 +17,6 @@ public class Render {
 
 
     public void render(Map map) {
-
 
         for (int rank = 9; rank >= 1; rank--) {
             String line = "";
@@ -37,7 +37,6 @@ public class Render {
     }
 
     private String getEntityFigure(Entity entity) {
-        String result;
         if (entity instanceof Herbivore) {
             return hareEmoji + ".";
         } else if (entity instanceof Predator) {

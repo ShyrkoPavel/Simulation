@@ -8,7 +8,6 @@ public class Main {
         Render render = new Render();
         simulation.initWorld();
 
-
         while (simulation.herbivoresExist()) {
             simulation.startSimulation(render);
             System.out.println("_______________________________");

@@ -1,8 +1,8 @@
-package org.example;
+package org.example.entitys;
 
-import java.util.HashSet;
+import org.example.Coordinates;
+
 import java.util.Objects;
-import java.util.Set;
 
 public abstract class Entity {
     public Coordinates coordinates;
@@ -11,7 +11,6 @@ public abstract class Entity {
         this.coordinates = coordinates;
     }
     public Entity(){};
-
 
     @Override
     public boolean equals(Object o) {
